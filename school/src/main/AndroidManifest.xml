@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.schooltriangle"
+    android:versionCode="6"
+    android:versionName="5.1"
+    >
+
+    <uses-sdk tools:overrideLibrary="com.facebook.android" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.schooltriangle.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme"
+
+        >
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBV0vqn1fYMFKSX1NJWw3eRP_L-uZywp5U" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.schooltriangle.main.SplashActivity"
+            android:label="@string/app_name"
+
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <action android:name="android.intent.action.MAIN"/>
+
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+
+        </activity>
+
+        <receiver android:name="com.schooltriangle.broadcast.AppointmentNotifier" />
+
+
+        <activity
+            android:name="com.schooltriangle.main.GuestLogin"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.schooltriangle.main.Addnote"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.schooltriangle.main.ConfidentialNote"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.schooltriangle.main.HomeActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name="com.schooltriangle.main.Invitefndreq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.ProfileViews"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.personal"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.main.FacilityProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.DoctorProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.ViewProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.EditMyProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.FamilyInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.InsuranceDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.appointment.AlertDialogActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar" />
+        <activity
+            android:name="com.schooltriangle.search.JeevSearchFilters"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.search.JeevSearchList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.search.UserSavedSearches"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.FacilityMapView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.EmailConsultation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.RequestQuote"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.SendMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.RequestCallback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.Appointments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.PurchaseRequest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.PurchaseRequestStepTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.LabTest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.AppointmentStepTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.AppointmentStepThree"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.SlotsScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.SendMessageStepTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.medvault.MedVaultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.medvault.DocumentUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.SelectDocumentForAttachment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.serviceRequest.EmailconsultationStepTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.appointment.IndivisualAppointmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.video.VideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.wallet.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.wallet.RecentTransactions"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.appointment.ServiceRequestsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.main.YouTubeCustomPlayerActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="com.schooltriangle.main.PayNowWebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Declaring Service in Manifest -->
+        <service
+            android:name="com.schooltriangle.medvault.DownloadDocument"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="com.schooltriangle.library.main.SignInActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.main.Invitefriend"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.library.main.SignUpLoginActivity"
+            android:screenOrientation="portrait" />
+       <!-- <activity
+            android:name="com.school.main.ShareOnFacebook"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.schooltriangle.library.main.ConsumerProfessionalSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.library.main.ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.library.main.PhoneEmailVerification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.library.main.PhoneAndEmailVerification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.library.main.AddressBasedMap"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.library.main.TermsAndConditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.library.main.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.appointment.ServiceRequestDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.appointment.MessagesListClass"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.library.main.IntroScreenActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.schooltriangle.main.GeneralActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.schooltriangle.appointment.AlarmReceiver"
+            android:process=":remote" />
+
+        <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:smallScreens="true"
+            android:xlargeScreens="true" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="@string/google_maps_key" /> -->
+
+        <activity
+            android:name="com.schooltriangle.search.MapsSearchViewActivity"
+            android:label="@string/title_activity_maps_search_view"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.healthvitals.HealthVitals"
+            android:label="@string/title_activity_health_vitals"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.healthvitals.AddHealthVital"
+            android:label="@string/title_activity_add_health_vital"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.healthvitals.HealthIndicators"
+            android:label="@string/title_activity_health_indicators"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.healthvitals.ViewHealthVitalInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.healthvitals.AddVitalReading"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.schooltriangle.main.CareAtHome"
+            android:label="@string/title_activity_care_at_home"></activity>
+        <activity
+            android:name="com.schooltriangle.healthvitals.AddHeightIndicatorValue"
+            android:label="@string/title_activity_add_height_indicator_value"></activity>
+
+        <!--
+         Optionally, register AnalyticsReceiver and AnalyticsService to support background
+         dispatching on non-Google Play devices
+       -->
+
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!--
+            Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+            installation campaign reporting
+       -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+    </application>
+
+</manifest>
